@@ -7,4 +7,6 @@ var inquirer = require("inquirer");
 
 // omdb.movieSearch(input);
 // bands.bandSearch(input);
-spotify.songSearch(input);
+//spotify.songSearch(input);
+
+inquirer.prompt([{}])
