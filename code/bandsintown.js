@@ -2,7 +2,7 @@
 var request = require("request");
 var moment = require("moment");
 
-var bandSearch = function (input) {
+var bandSearch = function (input, callback) {
 
     var artist = encodeURI(input);
     request(`https://rest.bandsintown.com/artists/${artist}/events?app_id=codingbootcamp`, function (error, response, body) {
@@ -15,8 +15,9 @@ var bandSearch = function (input) {
 
                 console.log(moment(elem.datetime).format("MM/DD/YYYY"));
                 console.log('~~~~~~');
-            });
-
+            }
+            );
+            callback();
         }
     });
 }

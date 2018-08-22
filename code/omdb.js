@@ -1,7 +1,7 @@
 //modular file for the OMDB API
 var request = require("request");
 
-var movieSearch = function(input){ 
+var movieSearch = function(input, callback){ 
     if (input === undefined || input === "") {
         input = "Mr. Nobody";
     }
@@ -18,6 +18,7 @@ var movieSearch = function(input){
     console.log(`Spoken Language(s): ${data.Language}`);
     console.log(`Plot Summary: ${data.Plot}`);
     console.log(`Cast: ${data.Actors}`);
+    callback();
   }
 });}
 
