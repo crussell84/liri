@@ -13,8 +13,8 @@ Liri is a command line Node app that takes in input and returns data. It intergr
 - Navigate to the 'code' directory ('/var/code' if using vagrant)
 - Run `npm install` to install the required Node modules
 - You will need to place your own .env file with Spotify keys in the 'code' directory in the following format:
-    `SPOTIFY_ID=your-spotify-id
-    SPOTIFY_SECRET=your-spotify-secret`
+    `SPOTIFY_ID=your-spotify-id`
+    `SPOTIFY_SECRET=your-spotify-secret`
 - Run `node liri` to start the program
 - Follow the on-screen prompts
 
