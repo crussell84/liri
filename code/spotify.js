@@ -6,6 +6,9 @@ var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
 
 var songSearch = function (input, callback) {
+  if (input === undefined || input === "") {
+    input = "All Star";
+  }
 
   spotify.search({ type: 'track', query: input }, function (err, data) {
     if (err) {

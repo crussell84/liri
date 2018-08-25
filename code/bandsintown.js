@@ -3,6 +3,9 @@ var request = require("request");
 var moment = require("moment");
 
 var bandSearch = function (input, callback) {
+    if (input === undefined || input === "") {
+        input = "Halestorm";
+    }
 
     var artist = encodeURI(input);
     request(`https://rest.bandsintown.com/artists/${artist}/events?app_id=codingbootcamp`, function (error, response, body) {
